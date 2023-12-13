@@ -28,20 +28,6 @@ def get_next_open_row(board,col):
         if board[r][col] == 0:
             return r
         
-# def game_tie(board):
-#     flag = False
-#     for c in range(COLUMN_COUNT):
-#         for r in range(ROW_COUNT):
-#             if board[r][c] == 0:
-#                 flag = False
-#             else:
-#                 flag = True
-#     if flag == True:
-#         return True
-#     else:
-#         return False
-
-        
 def print_board(board):
     print(np.flip(board,0))
 
@@ -139,10 +125,6 @@ while not game_over:
                         screen.blit(label,(40,10))
                         game_over = True
 
-                    # if game_tie(board):
-                    #     tie_label = tie_font.render("Tie!!",1,CYAN)
-                    #     screen.blit(tie_label,(40,10))
-                    #     game_over = True
                         
 
             #Ask player2 for input
@@ -159,12 +141,6 @@ while not game_over:
                         screen.blit(label,(40,10))
                         game_over = True
                     
-                    # if game_tie(board):
-                    #     tie_label = tie_font.render("Tie!!",1,CYAN)
-                    #     screen.blit(tie_label,(40,10))
-                    #     game_over = True
-                        
-        
 
             print_board(board)
             draw_board(board)
